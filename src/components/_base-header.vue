@@ -16,10 +16,13 @@ export default {
   },
   methods: {
     getData() {
+      console.log('ready to logout')
       this.$http.get('/ehi/sessionSync/bo-session-sync', true).then(
         (response) => {
-          console.log(response)
-          window.location.href = '/bov2/login.html'
+          setTimeout(() => {
+            console.log(response)
+            window.location.href = '/bov2/login.html'
+          }, 5000)
         },
         (response) => {
           console.warn(response)

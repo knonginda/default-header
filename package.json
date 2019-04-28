@@ -1,11 +1,11 @@
 {
   "name": "@knonginda/default-header",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "default header",
   "main": "index.js",
   "scripts": {
     "dev": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name index ./src/components/_globals.js",
     "lint:eslint": "eslint --fix",
     "lint:stylelint": "stylelint --fix",
     "lint:prettier": "prettier --write --loglevel warn",

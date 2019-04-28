@@ -1,0 +1,41 @@
+{
+  "name": "@knonginda/default-header",
+  "version": "1.0.0",
+  "description": "default header",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint:eslint": "eslint --fix",
+    "lint:stylelint": "stylelint --fix",
+    "lint:prettier": "prettier --write --loglevel warn",
+    "lint:all:eslint": "npm run lint:eslint \"src/**/*.{vue,js}\"",
+    "lint:all:stylelint": "npm run lint:stylelint \"src/**/*.{vue, scss}\"",
+    "lint:all:prettier": "npm run lint:prettier \"**/*.{json,css,scss,html,md}\"",
+    "lint": "run-s lint:all:*",
+    "test:unit": "vue-cli-service test:unit",
+    "test:unit:ci": "npm run test:unit --coverage --ci",
+    "test:unit:file": "npm run test:unit --bail --findRelatedTests",
+    "test": "run-s test:unit"
+  },
+  "devDependencies": {
+    "@knonginda/base": "1.0.6"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "author": "Jett Liu",
+  "license": "ISC",
+  "keywords": [
+    "vuejs",
+    "default-header"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  }
+}

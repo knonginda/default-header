@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@components/nav-bar render its content 1`] = `
+<nav class="nav">
+  <ul>
+    <li class="brandContainer"></li>
+    <li class="dropdown topMenuItem"><a href="#" class="dropdownToggle">
+        Applications
+        <span class="icon"><baseicon-stub name="down-arrow" width="64" height="64" color="#ffffff" click="function _default() {}"></baseicon-stub></span></a>
+      <ul class="dropdownMenu">
+        <li class="dropdownSubmenu"><a href="test">Application Batch Entry</a></li>
+        <li class="dropdownSubmenu"><a href="test">Document Manager</a></li>
+        <li class="dropdownSubmenu"><a href="test">Global Search</a></li>
+        <li class="dropdownSubmenu"><a href="test">Individual Search</a></li>
+        <li class="dropdownSubmenu"><a href="test">My App Work Queue</a></li>
+        <li class="dropdownSubmenu"><a href="test">My Service Tickets</a></li>
+        <li class="dropdownSubmenu"><a href="test">Submitted App Manager</a></li>
+      </ul>
+    </li>
+    <li class="dropdown topMenuItem"><a href="#" class="dropdownToggle">
+        Leads
+        <span class="icon"><baseicon-stub name="down-arrow" width="64" height="64" color="#ffffff" click="function _default() {}"></baseicon-stub></span></a>
+      <ul class="dropdownMenu">
+        <li class="dropdownSubmenu"><a href="test">Global Search</a></li>
+        <li class="dropdownSubmenu"><a href="test">Individual Search</a></li>
+        <li class="dropdownSubmenu"><a href="test">Inbound Enrollment Script</a></li>
+        <!---->
+        <li class="dropdownSubmenu"><a href="test">My Lead Work Queue</a></li>
+      </ul>
+    </li>
+    <li class="dropdown topMenuItem"><a href="#" class="dropdownToggle">
+        Tasks
+        <span class="icon"><baseicon-stub name="down-arrow" width="64" height="64" color="#ffffff" click="function _default() {}"></baseicon-stub></span></a>
+      <ul class="dropdownMenu">
+        <li class="dropdownSubmenu"><a>App Universal WQ</a> <span class="icon iconSubMenu"><baseicon-stub name="right-arrow" width="64" height="64" color="#333333" click="function _default() {}"></baseicon-stub></span>
+          <ul class="dropdownMenu">
+            <li><a href="test">All</a></li>
+            <li><a href="test">Administrator</a></li>
+            <li><a href="test">Clerk</a></li>
+            <li><a href="test">Customer Retention</a></li>
+            <li><a href="test">Customer Service</a></li>
+            <li><a href="test">External User</a></li>
+            <li><a href="test">External Supervisor</a></li>
+            <li><a href="test">Forms Administrator</a></li>
+            <li><a href="test">IFP Sales Rep</a></li>
+            <li><a href="test">Medicare Compliance</a></li>
+            <li><a href="test">Medicare Customer Service</a></li>
+            <li><a href="test">Medicare Enrollment</a></li>
+            <li><a href="test">MS Enrollment Specialist</a></li>
+            <li><a href="test">Medicare Sales</a></li>
+            <li><a href="test">Medicare Supervisor</a></li>
+            <li><a href="test">Outbound Rep</a></li>
+            <li><a href="test">PPS Rep</a></li>
+            <li><a href="test">Reviewer</a></li>
+            <li><a href="test">Reviewer-CS</a></li>
+            <li><a href="test">Sales Support</a></li>
+            <li><a href="test">Telesales Rep</a></li>
+          </ul>
+        </li>
+        <li class="dropdownSubmenu"><a href="test">App WQ Manager</a></li>
+        <li class="dropdownSubmenu"><a>Lead Universal WQ</a> <span class="icon iconSubMenu"><baseicon-stub name="right-arrow" width="64" height="64" color="#333333" click="function _default() {}"></baseicon-stub></span>
+          <ul class="dropdownMenu">
+            <li><a href="test">All</a></li>
+            <li><a href="test">Clerk</a></li>
+            <li><a href="test">Customer Retention</a></li>
+            <li><a href="test">Customer Service</a></li>
+            <li><a href="test">External User</a></li>
+            <li><a href="test">External Supervisor</a></li>
+            <li><a href="test">Forms Administrator</a></li>
+            <li><a href="test">IFP Sales Rep</a></li>
+            <li><a href="test">Medicare Compliance</a></li>
+            <li><a href="test">Medicare Customer Service</a></li>
+            <li><a href="test">Medicare Enrollment</a></li>
+            <li><a href="test">MS Enrollment Specialist</a></li>
+            <li><a href="test">Medicare Sales</a></li>
+            <li><a href="test">Medicare Supervisor</a></li>
+            <li><a href="test">Outbound Rep</a></li>
+            <li><a href="test">PPS Rep</a></li>
+            <li><a href="test">Reviewer</a></li>
+            <li><a href="test">Reviewer-CS</a></li>
+            <li><a href="test">Sales Support</a></li>
+            <li><a href="test">Telesales Rep</a></li>
+          </ul>
+        </li>
+        <li class="dropdownSubmenu"><a href="test">Lead WQ Manager</a></li>
+        <li class="dropdownSubmenu"><a>Universal Service Tickets</a> <span class="icon iconSubMenu"><baseicon-stub name="right-arrow" width="64" height="64" color="#333333" click="function _default() {}"></baseicon-stub></span>
+          <ul class="dropdownMenu">
+            <li><a href="test">All</a></li>
+            <li><a href="test">Administrator</a></li>
+            <li><a href="test">Customer Service</a></li>
+            <li><a href="test">Customer Retention</a></li>
+            <li><a href="test">Medicare Enrollment</a></li>
+            <li><a href="test">MS Enrollment Specialist</a></li>
+            <li><a href="test">Medicare Compliance</a></li>
+            <li><a href="test">Medicare Supervisor</a></li>
+            <li><a href="test">IFP Sales Rep</a></li>
+            <li><a href="test">Outbound Rep</a></li>
+            <li><a href="test">Reviewer</a></li>
+            <li><a href="test">Reviewer-CS</a></li>
+            <li><a href="test">Sales Support</a></li>
+            <li><a href="test">Supervisor</a></li>
+            <li><a href="test">Senior Enrollment Rep</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown topMenuItem"><a href="#" class="dropdownToggle">
+        Email
+        <span class="icon"><baseicon-stub name="down-arrow" width="64" height="64" color="#ffffff" click="function _default() {}"></baseicon-stub></span></a>
+      <ul class="dropdownMenu">
+        <li class="dropdownSubmenu"><a href="test">Auto Email - Application</a></li>
+        <li class="dropdownSubmenu"><a href="test">Auto Email - Lead</a></li>
+        <!---->
+        <li class="dropdownSubmenu"><a href="test">Bulk Email</a></li>
+        <li class="dropdownSubmenu"><a href="test">Bulk Email II</a></li>
+        <li class="dropdownSubmenu"><a href="test">Template Maintenance</a></li>
+      </ul>
+    </li>
+    <!---->
+    <li class="dropdown topMenuItem"><a href="#" class="dropdownToggle">
+        Utilities
+        <span class="icon"><baseicon-stub name="down-arrow" width="64" height="64" color="#ffffff" click="function _default() {}"></baseicon-stub></span></a>
+      <ul class="dropdownMenu">
+        <li class="dropdownSubmenu"><a href="test">Carrier Administration</a></li>
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <li class="dropdownSubmenu"><a href="test">LiveOps Mapping</a></li>
+        <li class="dropdownSubmenu"><a href="test">Medicare Appointments</a></li>
+        <li class="dropdownSubmenu"><a href="test">Medicare Enrollment Dashboard</a></li>
+        <li class="dropdownSubmenu"><a href="test">Manage IFP Call Volume</a></li>
+        <!---->
+        <li class="dropdownSubmenu"><a href="test">Medicare Manager Override Code</a></li>
+        <!---->
+        <li class="dropdownSubmenu"><a href="test">Rider Maintenance</a></li>
+        <li class="dropdownSubmenu"><a href="test">Real-Time Calling</a></li>
+        <li class="dropdownSubmenu"><a href="test">Script Error Log</a></li>
+        <li class="dropdownSubmenu"><a href="test">Sales Programs</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+`;

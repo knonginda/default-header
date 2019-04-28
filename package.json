@@ -1,8 +1,8 @@
 {
   "name": "@knonginda/default-header",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "default header",
-  "main": "index.js",
+  "main": "build/index.common.js",
   "scripts": {
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build --target lib --name index ./src/components/_globals.js",
@@ -52,6 +52,10 @@
     "vue-jest": "3.0.2",
     "vue-template-compiler": "2.6.10"
   },
+  "files": [
+    "build/index.common.js",
+    "build/index.css"
+  ],
   "engines": {
     "node": ">=8.9.0"
   },

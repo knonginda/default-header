@@ -36,7 +36,7 @@ export default {
 </template>
 
 <style lang="scss">
-@import '~@bo/base/design/index.scss';
+@import '~@knonginda/base/src/design/index.scss';
 
 *,
 *::before,

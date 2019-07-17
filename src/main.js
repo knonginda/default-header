@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './app'
 
-import '@bo/base'
+import '@knonginda/base'
 import '@components/_globals'
 
 // Don't warn about using the dev version of Vue in development.

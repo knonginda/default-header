@@ -83,7 +83,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import '~@bo/base/design/index.scss';
+@import '~@knonginda/base/src/design/index.scss';
 
 .bar {
   display: flex;

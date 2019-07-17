@@ -1,6 +1,6 @@
 {
   "name": "@knonginda/default-header",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "default header",
   "main": "build/index.common.js",
   "scripts": {

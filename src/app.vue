@@ -9,17 +9,34 @@ export default {
       return title ? `${title} | ${appConfig.title}` : appConfig.title
     },
   },
+  data() {
+    return {
+      currentUser: '',
+    }
+  },
+  created() {
+    this.getUserData()
+  },
+  methods: {
+    getUserData() {
+      this.$http
+        .get(`/newbo/api/auth/user?cacheSlayer=${new Date().getTime()}`)
+        .then((response) => {
+          this.currentUser = response.body
+        })
+    },
+  },
 }
 </script>
 
 <template>
-  <div class="baseStyle">
-    <BaseHeader />
+  <div v-if="currentUser" class="baseStyle">
+    <BaseHeader :current-user="currentUser" />
   </div>
 </template>
 
 <style lang="scss">
-@import '~@knonginda/base/src/design/index.scss';
+@import '~@bo/base/design/index.scss';
 
 *,
 *::before,
@@ -28,7 +45,7 @@ export default {
 }
 
 body {
-  @extend %typography-medium;
+  @extend %typography-small;
 
   margin: 0;
   background: $color-body-bg;

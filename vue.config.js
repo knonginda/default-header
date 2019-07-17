@@ -13,6 +13,7 @@ module.exports = {
     resolve: {
       alias: require('./aliases.config').webpack,
     },
+    devtool: false,
   },
   css: {
     // Enable CSS source maps.
@@ -24,8 +25,11 @@ module.exports = {
     ...(process.env.VUE_APP_API_BASE_URL // Proxy API endpoints to the production base URL.
       ? {
           proxy: {
-            '/api': {
+            '/bose-api': {
               target: process.env.VUE_APP_API_BASE_URL,
+              headers: { 'X-Forwarded-Proto': 'https' },
+              changeOrigin: true,
+              secure: false,
             },
           },
         } // Proxy API endpoints a local mock API.

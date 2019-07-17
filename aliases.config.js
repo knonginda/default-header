@@ -12,6 +12,8 @@ const aliases = {
   '@assets': 'src/assets',
   '@design': 'src/design/index.scss',
   '@resources': 'src/resources',
+  '@common': 'src/common',
+  '@state': 'src/state',
 }
 
 module.exports = {

@@ -1,9 +1,16 @@
 <script>
-import { format } from 'date-fns'
-
 export default {
-  computed: {
-    loginTime: () => format(new Date(), 'MM/DD/YYYY hh:mm:ss'),
+  props: {
+    currentUser: {
+      type: Object,
+      required: true,
+    },
+  },
+  methods: {
+    changeRole(event, roleName) {
+      event.target.href =
+        event.target.href + '&bo.returnUrl=' + window.location.href
+    },
   },
 }
 </script>
@@ -11,28 +18,63 @@ export default {
 <template>
   <div class="bar">
     <div class="left">
-      <BaseFasIcon :name="['far', 'clock']" />
-      Previous Login: {{ loginTime }}
+      <span><BaseFasIcon :name="['far', 'clock']"/></span>
+      <span v-if="currentUser.preFailDate"
+        >Previous Login Failed:
+        {{
+          currentUser.preFailDate
+            | moment('timezone', 'America/Los_Angeles', 'MM-DD-YYYY hh:mm:ss A')
+        }}</span
+      >
+      <span v-if="currentUser.preLoginDate"
+        >Previous Login:
+        {{
+          currentUser.preLoginDate
+            | moment('timezone', 'America/Los_Angeles', 'MM-DD-YYYY hh:mm:ss A')
+        }}</span
+      >
+      <span
+        >Last Login:
+        {{
+          currentUser.lastLoginDate
+            | moment('timezone', 'America/Los_Angeles', 'MM-DD-YYYY hh:mm:ss A')
+        }}</span
+      >
     </div>
     <ul class="right">
-      <li
-        ><BaseFasIcon class="icon" :name="['far', 'user-circle']" />Jett Liu</li
-      >
       <li>
-        <a href="/logout" class="logout"
-          ><BaseFasIcon class="icon" name="sign-out-alt" />Sign Out</a
-        >
+        <BaseFasIcon class="icon" :name="['far', 'user-circle']" />
+        {{ currentUser.firstName }} {{ currentUser.lastName }} (<span>{{
+          currentUser.currentRole.roleName
+        }}</span
+        >)
+      </li>
+      <li>
+        <a href="/ehi/Logout.ds?mcei.app.terminalID=__tid__1_" class="logout">
+          <BaseFasIcon class="icon" name="sign-out-alt" />
+          Sign Out
+        </a>
       </li>
       <li class="dropdown userRole">
-        <div class="dropdownToggle"
-          ><BaseFasIcon class="icon" name="cog" />User Role</div
-        >
+        <div class="dropdownToggle">
+          <BaseFasIcon class="icon" name="cog" />
+          User Role
+        </div>
         <ul class="dropdownMenu">
-          <li>
-            <a href="#">Administrator</a>
-          </li>
-          <li>
-            <a href="#">Medicare Sales</a>
+          <li v-for="(role, index) in currentUser.roles" :key="index">
+            <a
+              :href="
+                `/ehi/MainMenu.ds?mcei.app.terminalID=__tid__1_&mcei.html.screen=MainMenu&ehi.JAVASCRIPT_ENABLED=TRUE&bo.current_principal=${
+                  role.roleID
+                }`
+              "
+              :class="{
+                active: role.roleID === currentUser.currentRole.roleID,
+              }"
+              @click="changeRole($event, role.roleName)"
+            >
+              {{ role.roleName }}
+            </a>
           </li>
         </ul>
       </li>
@@ -41,7 +83,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import '~@knonginda/base/src/design/index.scss';
+@import '~@bo/base/design/index.scss';
 
 .bar {
   display: flex;
@@ -56,8 +98,13 @@ export default {
   }
 }
 
-.left > span {
-  vertical-align: sub;
+.left {
+  display: flex;
+  align-items: center;
+
+  > span {
+    margin-right: 10px;
+  }
 }
 
 .right {
@@ -65,6 +112,7 @@ export default {
 
   > li {
     display: flex;
+    align-items: center;
     margin-left: 20px;
   }
 }
@@ -94,7 +142,8 @@ export default {
     color: $color-text;
     white-space: nowrap;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: #fff;
       background-color: lighten($brand-green, 5%);
     }

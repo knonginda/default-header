@@ -7,47 +7,18 @@ export default {
     BaseTopBar,
     BaseNavBar,
   },
-  data: () => {
-    return {}
-  },
-  created() {
-    this.getData()
-    this.getAuthData()
-  },
-  methods: {
-    getData() {
-      console.log('ready to logout')
-      this.$http.get('/ehi/sessionSync/bo-session-sync', true).then(
-        (response) => {
-          setTimeout(() => {
-            console.log(response)
-            window.location.href = '/bov2/login.html'
-          }, 5000)
-        },
-        (response) => {
-          console.warn(response)
-        }
-      )
-    },
-    getAuthData() {
-      this.$http
-        .get(`/newbo/api/auth/user?cacheSlayer=${new Date().getTime()}`)
-        .then(
-          (response) => {
-            console.log(response)
-          },
-          (response) => {
-            console.warn(response)
-          }
-        )
+  props: {
+    currentUser: {
+      type: Object,
+      required: true,
     },
   },
 }
 </script>
 
 <template>
-  <header>
-    <BaseTopBar />
-    <BaseNavBar />
+  <header v-if="currentUser">
+    <BaseTopBar :current-user="currentUser.sessionUser" />
+    <BaseNavBar :current-user="currentUser" />
   </header>
 </template>
